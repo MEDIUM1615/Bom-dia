@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiramente Bom Dia!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mensagem {
+            margin-top: 50px;
+            font-size: 2em;
+            color: #ff4d4d;
+        }
+
+        .foto-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .foto {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .coração {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 50px;
+            color: red;
+            animation: piscar 1.5s infinite;
+            opacity: 0;
+        }
+
+        @keyframes piscar {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Botão para mostrar a foto */
+        .botao {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mensagem" id="mensagem">
+        <p>Bom Dia meu amor, Eu te amo muito Jake! muito mesmo, você foi a melhor coisa que ja me aconteceu, se você me permitir ser verdadeiramente bom com você, eu vou te da os melhores dias da sua vida! Quero iluminar seus dias igual você ilumina os meus,
+        Você aquece meu coração, eu quero poder aquecer o seu.</p>
+    </div>
+
+    <button class="botao" onclick="mostrarFoto()">Clique aqui!</button>
+
+    <div class="foto-container" id="fotoContainer" style="display: none;">
+        <img src="SPOILER_IMG_20240811_210009_159.jpg" alt="Foto da Pessoa" class="foto">
+        <div class="coração">&#10084;</div>
+    </div>
+
+    <script>
+        function mostrarFoto() {
+            document.getElementById('fotoContainer').style.display = 'inline-block';
+        }
+    </script>
+
+</body>
+</html>
